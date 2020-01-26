@@ -17,12 +17,14 @@ class NewBoxForm extends Component {
 
   handleSubmit(evt) {
     evt.preventDefault();
-    this.props.addBox(this.state);
+    const newBox = {...this.state, id: uuid()};
+    this.props.addBox(newBox);
+    evt.target.height = "focus";
     this.setState({
       height: "",
       width: "",
       color: ""
-    })
+    });
   }
 
   render() {
@@ -36,6 +38,7 @@ class NewBoxForm extends Component {
             name="height"
             onChange={this.handleChange}
             value={this.state.height}
+            autoFocus
           />
         </div>
         <div>

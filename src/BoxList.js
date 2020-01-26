@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
-import uuid from 'uuid/v4';
 
 class BoxList extends Component {
   constructor(props) {
@@ -14,7 +13,6 @@ class BoxList extends Component {
   }
 
   addBox(item) {
-    // const items = {...item, id: uuid()}
     this.setState(prevValue => {
       return {
         boxes: [...this.state.boxes, item]
@@ -22,9 +20,9 @@ class BoxList extends Component {
     })
   }
 
-  removeBox(evt){
+  removeBox(id){
     this.setState({
-      boxes: this.state.boxes.filter(box => box.id !== evt.target.value)
+      boxes: this.state.boxes.filter(box => box.id !== id)
     })
   }
 
@@ -32,11 +30,11 @@ class BoxList extends Component {
     const boxes = this.state.boxes.map(box => {
       return (
         <Box
-          key={uuid()}
+          key={box.id}
           width={box.width}
           height={box.height}
           color={box.color}
-          removeBox={this.removeBox}
+          removeBox={() => this.removeBox(box.id)}
         />
       );
     });
