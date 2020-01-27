@@ -19,7 +19,7 @@ class TodoList extends Component {
 
   remove(id) {
       this.setState({
-          todos: this.todos.filter(todo => todo.id !== id)
+          todos: this.state.todos.filter(todo => todo.id !== id)
       })
   }
 
