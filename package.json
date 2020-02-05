@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "color-box-maker",
+=======
+  "name": "todo-list-app-react",
+>>>>>>> 8fd1fbb227db95bffbba79c721e3dbc12b744582
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+>>>>>>> 8fd1fbb227db95bffbba79c721e3dbc12b744582
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +14,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
+=======
+  background: linear-gradient(90deg, #c7168c, #daa3da, #5216b3);
+  height: 100%;
+>>>>>>> 8fd1fbb227db95bffbba79c721e3dbc12b744582
 }
 
 code {
